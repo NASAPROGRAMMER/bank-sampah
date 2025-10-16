@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasabah Setor Sampah</title>
+  <link rel="stylesheet" href="nasabah.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">Nasabah Setor Sampah</h2>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active" data-section="dashboard">Dashboard</a></li>
+          <li><a href="#" class="nav-link" data-section="setor">Setor Sampah</a></li>
+          <li><a href="#" class="nav-link" data-section="penarikan">Penarikan</a></li>
+          <li><a href="#" class="nav-link" data-section="riwayat">Riwayat Transaksi</a></li>
+          <li><a href="#" class="nav-link" data-section="tarik">Tarik Dana</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <!-- Dashboard -->
+    <section id="dashboard" class="section active">
+      <h3>Hallo Nasabah!</h3>
+      <p>Selamat datang di sistem tabungan sampah digital.</p>
+    </section>
+
+    <!-- Setor Sampah -->
+    <section id="setor" class="section">
+      <h3>Setor Sampah</h3>
+      <form>
+        <label for="jenis">Jenis Sampah</label>
+        <input type="text" id="jenis" placeholder="Misal: Botol Plastik">
+
+        <label for="berat">Berat (kg)</label>
+        <input type="number" id="berat" placeholder="Masukkan berat sampah">
+
+        <div class="form-btns">
+          <button type="submit" class="btn-confirm">Kirim</button>
+          <button type="reset" class="btn-reject">Batal</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Penarikan -->
+    <section id="penarikan" class="section">
+      <h3>Ajukan Penarikan Dana Anda</h3>
+
+      <div class="saldo-box">
+        <label>Saldo Anda:</label>
+        <div class="saldo">Rp 14.000.000</div>
+      </div>
+
+      <form>
+        <label for="jumlah">Jumlah Penarikan</label>
+        <input type="number" id="jumlah" placeholder="Masukkan nominal">
+
+        <label>Pilih Metode Penarikan:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="metode" checked> Ambil Tunai</label>
+          <label><input type="radio" name="metode"> Transfer Bank</label>
+        </div>
+
+        <button type="submit" class="btn-confirm">Ajukan Penarikan</button>
+      </form>
+    </section>
+
+    <!-- Riwayat Transaksi -->
+    <section id="riwayat" class="section">
+      <h3>Riwayat Transaksi</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Jenis Sampah</th>
+            <th>Berat (kg)</th>
+            <th>Nominal</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>23-11-2025</td>
+            <td>Plastik</td>
+            <td>3</td>
+            <td>Rp 6.000</td>
+            <td><span class="status-ok">Selesai</span></td>
+          </tr>
+          <tr>
+            <td>20-11-2025</td>
+            <td>Kertas</td>
+            <td>5</td>
+            <td>Rp 10.000</td>
+            <td><span class="status-ok">Selesai</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Tarik Dana -->
+    <section id="tarik" class="section">
+      <h3>Tarik Dana</h3>
+      <form>
+        <label for="jumlah-tarik">Jumlah Penarikan</label>
+        <input type="number" id="jumlah-tarik" placeholder="Masukkan nominal">
+
+        <label for="metode">Metode Penarikan</label>
+        <select id="metode">
+          <option>Ambil Tunai</option>
+          <option>Transfer Bank</option>
+        </select>
+
+        <div class="form-btns">
+          <button type="submit" class="btn-confirm">Tarik Dana</button>
+          <button type="reset" class="btn-reject">Batal</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        const target = link.dataset.section;
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
