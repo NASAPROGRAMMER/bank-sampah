@@ -12,8 +12,8 @@
   <div class="navbar">
     <button class="nav-btn active" onclick="showSection('dashboard')">Dashboard</button>
     <button class="nav-btn" onclick="showSection('kelola')">Kelola Nasabah</button>
-    <button class="nav-btn" onclick="showSection('setoran')">Konfirmasi Setoran</button>
-    <button class="nav-btn" onclick="showSection('penarikan')">Konfirmasi Penarikan</button>
+    <button class="nav-btn" onclick="showSection('setoran')">Kelola Setoran</button>
+    <button class="nav-btn" onclick="showSection('penarikan')">Kelola Penarikan</button>
     <button class="nav-btn" onclick="showSection('harga')">Kelola Harga</button>
   </div>
 
@@ -62,23 +62,25 @@
 
     <!-- Konfirmasi Setoran -->
     <section id="setoran">
-      <h2>Konfirmasi Setoran</h2>
+      <h2>Kelola Setoran</h2>
       <input type="text" id="search-setoran" class="search" placeholder="Cari Data Nasabah...">
+      <button class="btn-green">Tambah</button>
       <table id="table-setoran">
         <tr><th>Tanggal</th><th>Nama</th><th>Jumlah</th><th>Aksi</th></tr>
-        <tr><td>23-11-2025</td><td>Anton Wardani</td><td>Rp 200.000</td><td><button class="btn-green">Konfirmasi</button> <button class="btn-red">Tolak</button></td></tr>
-        <tr><td>23-11-2025</td><td>Agung Budiono</td><td>Rp 350.000</td><td><button class="btn-green">Konfirmasi</button> <button class="btn-red">Tolak</button></td></tr>
+        <tr><td>23-11-2025</td><td>Anton Wardani</td><td>Rp 200.000</td><td><button class="btn-green">Edit</button> </tr>
+        <tr><td>23-11-2025</td><td>Agung Budiono</td><td>Rp 350.000</td><td><button class="btn-green">Edit</button> </tr>
       </table>
     </section>
 
     <!-- Konfirmasi Penarikan -->
     <section id="penarikan">
-      <h2>Konfirmasi Penarikan</h2>
+      <h2>Kelola Penarikan</h2>
       <input type="text" id="search-penarikan" class="search" placeholder="Cari Data Nasabah...">
+      <button class="btn-green">Tambah</button>
       <table id="table-penarikan">
-        <tr><th>Tanggal</th><th>Nama</th><th>Metode</th><th>Aksi</th></tr>
-        <tr><td>23-11-2025</td><td>Anton Wardani</td><td>Transfer</td><td><button class="btn-green">Konfirmasi</button> <button class="btn-red">Tolak</button></td></tr>
-        <tr><td>23-11-2025</td><td>Agung Budiono</td><td>Ambil Tunai</td><td><button class="btn-green">Konfirmasi</button> <button class="btn-red">Tolak</button></td></tr>
+        <tr><th>Tanggal</th><th>Nama</th><th>Metode</th><th>Penarikan</th></tr>
+        <tr><td>23-11-2025</td><td>Anton Wardani</td><td>Transfer</td><td>Rp. 100.000</td>
+        <tr><td>23-11-2025</td><td>Agung Budiono</td><td>Ambil Tunai</td><td>Rp. 100.000</td>
       </table>
     </section>
 
@@ -87,7 +89,7 @@
       <h2>Kelola Harga</h2>
       <table>
         <tr><th>Jenis Sampah</th><th>Harga per Kg</th><th>Aksi</th></tr>
-        <tr><td>Plastik</td><td>Rp 3.000</td><td><button class="btn-green">Edit</button></td></tr>
+        <tr><td>Plastik</td><td>Rp 3.000</td><td><button class="btn-green">Edit</button> <button class="btn-red">Hapus</button></td></tr>
       </table>
     </section>
   </div>
