@@ -46,8 +46,8 @@
       <div id="nasabahForm" class="popup">
         <div class="popup-content">
           <h3>Edit Data Nasabah</h3>
-          <input type="text" placeholder="Username">
-          <input type="text" placeholder="ID">
+          <input type="text" placeholder="Nama Nasabah">
+          <input type="text" placeholder="Saldo">
           <input type="email" placeholder="Email">
           <input type="password" placeholder="Password">
           <input type="text" placeholder="Nomor Telepon">
@@ -84,10 +84,11 @@
       <div id="tambahSetoranForm" class="popup">
         <div class="popup-content">
           <h3>Tambah Data Setoran</h3>
+          <input type="text" placeholder="Tanggal Pengajuan">
           <input type="text" placeholder="Nama Nasabah">
           <input type="text" placeholder="Jenis Sampah">
-          <input type="number" placeholder="Berat (kg)">
-          <input type="text" placeholder="Jumlah (Rp)">
+          <input type="number" placeholder="Berat(kg)">
+          <input type="text" placeholder="Harga">
           <div class="popup-buttons">
             <button class="btn-green">Simpan</button>
             <button class="btn-red" onclick="closeForm('tambahSetoranForm')">Batal</button>
@@ -99,10 +100,11 @@
       <div id="editSetoranForm" class="popup">
         <div class="popup-content">
           <h3>Edit Data Setoran</h3>
+          <input type="text" placeholder="Tanggal Pengajuan">
           <input type="text" placeholder="Nama Nasabah">
-          <input type="text" placeholder="Jenis Sampah">
-          <input type="number" placeholder="Berat (kg)">
-          <input type="text" placeholder="Jumlah (Rp)">
+          <input type="number" placeholder="Jenis Sampah">
+          <input type="text" placeholder="Berat(kg)">
+          <input type="text" placeholder="Harga">
           <div class="popup-buttons">
             <button class="btn-green">Simpan</button>
             <button class="btn-red" onclick="closeForm('editSetoranForm')">Batal</button>
@@ -124,10 +126,10 @@
             <div id="tambahSetoranFormde" class="popup">
         <div class="popup-content">
           <h3>Tambah Data Setoran</h3>
+          <input type="text" placeholder="Tanggal Penarikan">
           <input type="text" placeholder="Nama Nasabah">
-          <input type="text" placeholder="Jenis Sampah">
-          <input type="number" placeholder="Berat (kg)">
-          <input type="text" placeholder="Jumlah (Rp)">
+          <input type="number" placeholder="Metode">
+          <input type="text" placeholder="Jumlah Penarikan">
           <div class="popup-buttons">
             <button class="btn-green">Simpan</button>
             <button class="btn-red" onclick="closeForm('tambahSetoranFormde')">Batal</button>
@@ -141,18 +143,18 @@
       <h2>Kelola Harga</h2>
       <button class="btn-green" onclick="openForm('tambahSetoranFormer')">Tambah</button>
       <table>
-        <tr><th>Jenis Sampah</th><th>Harga per Kg</th><th>Aksi</th></tr>
-        <tr><td>Plastik</td><td>Rp 3.000</td>
+        <tr><th>Jenis Sampah</th><th>Berat(kg)</th><th>Lapak(kg)</th><th>Nasabah(kg)</th><th>Aksi</th></tr>
+        <tr><td>Akrilik</td><td>1</td><td>Rp 13.000</td><td>20</td>
         <td><button class="btn-green" onclick="openForm('nasabahFormer')">Edit</button><button class="btn-red">Hapus</button></td>
       </table>
 
       <div id="tambahSetoranFormer" class="popup">
         <div class="popup-content">
           <h3>Tambah Data Setoran</h3>
-          <input type="text" placeholder="Nama Nasabah">
           <input type="text" placeholder="Jenis Sampah">
-          <input type="number" placeholder="Berat (kg)">
-          <input type="text" placeholder="Jumlah (Rp)">
+          <input type="text" placeholder="Berat(kg)">
+          <input type="number" placeholder="Lapak(kg)">
+          <input type="text" placeholder="Nasabah(kg)">
           <div class="popup-buttons">
             <button class="btn-green">Simpan</button>
             <button class="btn-red" onclick="closeForm('tambahSetoranFormer')">Batal</button>
@@ -164,12 +166,10 @@
          <div id="nasabahFormer" class="popup">
         <div class="popup-content">
           <h3>Edit Data Nasabah</h3>
-          <input type="text" placeholder="Username">
-          <input type="text" placeholder="ID">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Password">
-          <input type="text" placeholder="Nomor Telepon">
-          <input type="text" placeholder="Alamat">
+          <input type="text" placeholder="Jenis Sampah">
+          <input type="text" placeholder="Berat(kg)">
+          <input type="email" placeholder="Lapak(kg)">
+          <input type="password" placeholder="Nasabah(kg)">
           <div class="popup-buttons">
             <button class="btn-green">Simpan</button>
             <button class="btn-red" onclick="closeForm('nasabahFormer')">Batal</button>
